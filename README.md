@@ -1,3 +1,5 @@
+# Dungeon Crawler Game
+
 ## Project Overview
 Dungeon Navigator is a dungeon exploration and navigation game that combines graph algorithms and GUI visualization to create an engaging gameplay experience. Players must find a ring in the maze during the "Seek" phase and then collect treasures and escape within a limited number of steps during the "Scram" phase. The system leverages custom implementations of Dijkstra's algorithm for pathfinding and prioritizes efficiency and interactivity through a dynamic graphical interface.
 
