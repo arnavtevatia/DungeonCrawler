@@ -1,0 +1,34 @@
+# DungeonCrawler reflection
+
+## Submitter metadata
+
+Arnav Tevatia
+
+Hours spent working on this assignment: 12.5
+
+## Verification
+
+1. How many coins does your Player collect when running with a seed of
+   `-4004310660161599891`?
+
+   Answer: 395
+
+## Reflection
+
+   In essence, my "scram" strategy is a greedy approach - I find the closest coin and move
+   to it. I repeat this process until I would run out of steps trying to grab a coin. At that
+   point, I would immediately proceed to the exit. After implementing this, I also wanted to
+   incorporate the value of the coin. So, I decided to find the coin of highest value within 15
+   steps of the closest coin. If Player does not have enough steps to go there, it tries to go to
+   the closest coin, and if still it doesn't have enough, it exits. I decided on this strategy by
+   first thinking of a greedy approach that tries to get the most coin tiles. Then, I tried to
+   incorporate the value of the coin in an attempt to increase my average score. I think my submission should work as intended. We verified this by running all the
+   problematic seeds and seeds of different varieties to ensure the absence of bugs with corner
+   cases. While I did use the priority queue that was provided to us as well as standard Java
+   priority queue, I did implement two new classes in my project, both in the Player file. The
+   first is a version of the ShortestPaths class, named ScramShortestPaths. The only difference
+   between that and the original class is the addition of a field, used to store the distances to
+   each coin in the map. This is used to both find the closest coin and the greedy approach within
+   a certain distance of that coin. The other class is a graph object used in the seek method,
+   appropriately named SeekGraph. It implements the WeightedDigraph interface and allows Player to
+   find the shortest path to the next tile in the frontier (mainly used to optimize backtracking).
